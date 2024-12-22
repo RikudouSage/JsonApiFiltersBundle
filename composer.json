@@ -1,0 +1,23 @@
+{
+    "name": "rikudou/json-api-bundle-filters",
+    "description": "Easy to use plug-in for JSON API bundle to add support for filterable properties",
+    "type": "symfony-bundle",
+    "require": {
+        "php": "^8.2",
+        "rikudou/json-api-bundle": "^2.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rikudou\\JsonApiBundleFilters\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.0",
+        "friendsofphp/php-cs-fixer": "^3.65",
+        "jetbrains/phpstorm-attributes": "^1.2"
+    },
+    "scripts": {
+        "fixer": "php-cs-fixer fix src --verbose --allow-risky=yes",
+        "phpstan": "phpstan analyse --level=max src"
+    }
+}

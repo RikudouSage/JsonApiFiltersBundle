@@ -1,0 +1,7 @@
+services:
+  rikudou.json_api.filters.listener:
+    class: Rikudou\JsonApiBundleFilters\Listener\FilterPropertyListener
+    arguments:
+      - '@Rikudou\JsonApiBundle\NameResolution\ApiNameResolutionInterface'
+    tags:
+      - {name: kernel.event_listener, method: preResponse, priority: 10, event: rikudou_api.entity.pre_response}
