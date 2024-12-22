@@ -1,5 +1,5 @@
 {
-    "name": "rikudou/json-api-bundle-filters",
+    "name": "rikudou/json-api-filters-bundle",
     "description": "Easy to use plug-in for JSON API bundle to add support for filterable properties",
     "type": "symfony-bundle",
     "require": {
