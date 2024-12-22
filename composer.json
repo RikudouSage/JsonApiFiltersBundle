@@ -19,5 +19,6 @@
     "scripts": {
         "fixer": "php-cs-fixer fix src --verbose --allow-risky=yes",
         "phpstan": "phpstan analyse --level=max src"
-    }
+    },
+    "license": "MIT"
 }
