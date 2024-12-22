@@ -1,6 +1,6 @@
 <?php
 
-namespace Rikudou\JsonApiBundleFilters\Listener;
+namespace Rikudou\JsonApiFiltersBundle\Listener;
 
 use ReflectionClass;
 use ReflectionProperty;
@@ -9,8 +9,8 @@ use Rikudou\JsonApiBundle\Events\EntityApiResponseCreatedEvent;
 use Rikudou\JsonApiBundle\NameResolution\ApiNameResolutionInterface;
 use Rikudou\JsonApiBundle\Structure\Collection\JsonApiCollection;
 use Rikudou\JsonApiBundle\Structure\JsonApiObject;
-use Rikudou\JsonApiBundleFilters\Attribute\FilterProperty;
-use Rikudou\JsonApiBundleFilters\Enum\ApiPropertyFilterType;
+use Rikudou\JsonApiFiltersBundle\Attribute\FilterProperty;
+use Rikudou\JsonApiFiltersBundle\Enum\ApiPropertyFilterType;
 
 final readonly class FilterPropertyListener
 {

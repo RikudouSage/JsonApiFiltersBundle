@@ -1,6 +1,6 @@
 <?php
 
-namespace Rikudou\JsonApiBundleFilters;
+namespace Rikudou\JsonApiFiltersBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

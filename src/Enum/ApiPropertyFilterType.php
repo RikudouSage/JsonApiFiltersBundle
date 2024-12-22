@@ -1,6 +1,6 @@
 <?php
 
-namespace Rikudou\JsonApiBundleFilters\Enum;
+namespace Rikudou\JsonApiFiltersBundle\Enum;
 
 use DateTimeImmutable;
 use DateTimeInterface;

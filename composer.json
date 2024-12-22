@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Rikudou\\JsonApiBundleFilters\\": "src/"
+            "Rikudou\\JsonApiFiltersBundle\\": "src/"
         }
     },
     "require-dev": {
