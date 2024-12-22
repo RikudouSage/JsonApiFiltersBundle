@@ -1,6 +1,6 @@
 services:
   rikudou.json_api.filters.listener:
-    class: Rikudou\JsonApiBundleFilters\Listener\FilterPropertyListener
+    class: Rikudou\JsonApiFiltersBundle\Listener\FilterPropertyListener
     arguments:
       - '@Rikudou\JsonApiBundle\NameResolution\ApiNameResolutionInterface'
     tags:
