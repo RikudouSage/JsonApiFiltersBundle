@@ -8,13 +8,16 @@ use DateTimeInterface;
 enum ApiPropertyFilterType
 {
     case Boolean;
+    case BooleanTrue;
+    case BooleanFalse;
     case CurrentDateGreaterThan;
     case CurrentDateLowerThan;
 
     public function matches(mixed $value): bool
     {
         $callback = match ($this) {
-            self::Boolean => fn (mixed $value) => !!$value,
+            self::Boolean, self::BooleanTrue => fn (mixed $value) => !!$value,
+            self::BooleanFalse => fn (mixed $value) => !$value,
             self::CurrentDateGreaterThan => function (string|DateTimeInterface $value) {
                 if (!$value instanceof DateTimeInterface) {
                     $value = new DateTimeImmutable($value);
