@@ -77,6 +77,14 @@ final readonly class FilterPropertyListener
                     unset($iterable[$key]);
                 }
             }
+            foreach ($item->getRelationships() as $relationship) {
+                if ($relationship->getName() !== $field) {
+                    continue;
+                }
+                if (!$type->matches($relationship->getData())) {
+                    unset($iterable[$key]);
+                }
+            }
         }
 
         if ($data instanceof JsonApiObject) {

@@ -12,6 +12,7 @@ enum ApiPropertyFilterType
     case BooleanFalse;
     case CurrentDateGreaterThan;
     case CurrentDateLowerThan;
+    case NonEmptyCollection;
 
     public function matches(mixed $value): bool
     {
@@ -37,7 +38,10 @@ enum ApiPropertyFilterType
                 $now = new DateTimeImmutable();
 
                 return $now < $value;
-            }
+            },
+            self::NonEmptyCollection => function (mixed $value) {
+                return is_countable($value) && count($value) > 0;
+            },
         };
 
         // @phpstan-ignore argument.type
